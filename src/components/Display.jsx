@@ -1,12 +1,12 @@
 
 
-const Display = ({ currentOperand, previousOperand, operation }) => {
+const Display = ({ currentOperand, previousOperand, operation, formatOperand }) => {
 
     return (
         <section>
             <div className="text-white flex flex-col items-end p-4 justify-center">
-                <div>{previousOperand} {operation}</div>
-                <div>{currentOperand}</div>
+                <div>{formatOperand(previousOperand)} {operation}</div>
+                <div>{formatOperand(currentOperand)}</div>
             </div>
         </section>
     )
